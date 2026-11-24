@@ -1,0 +1,15 @@
+.git
+.github
+.venv
+__pycache__/
+*.pyc
+data/
+SpeechCommands/
+*.zip
+*.ipynb
+.ipynb_checkpoints
+metrics/
+samples/
+scripts/
+*.docx
+*.pdf

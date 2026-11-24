@@ -38,3 +38,8 @@ docker pull ghcr.io/yulianash/kws-mlops-lab3/kws-api:latest
 docker run -d -p 8000:8000 ghcr.io/yulianash/kws-mlops-lab3/kws-api:latest
 curl -X POST -F "file=@samples/yes.wav" http://localhost:8000/predict
 ```
+
+## Еталонні зразки (golden samples)
+`samples/*.wav` — по одному запису кожного класу з **тестової** вибірки (мовці, яких немає в train).
+Очікувані відповіді зафіксовані в `samples/expected.json`; job `verify` падає, якщо хоча б один
+зразок розпізнано неправильно (`scripts/verify_model.py` завершується з кодом 1).
